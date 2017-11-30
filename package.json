@@ -6,10 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capriza/react-native-open-doc.git"
+  },
   "keywords": [
     "react-native"
   ],
-  "author": "Guy Blank <blank.guy@gmail.com>",
+  "author": "Guy Blank",
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
