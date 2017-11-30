@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		313ED8A67F7140CADC9C61FB /* libPods-RNCOpenDoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ECAA4140073F78A2A4C9C9 /* libPods-RNCOpenDoc.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNCOpenDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNCOpenDoc.m */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNCOpenDoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCOpenDoc.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F245479B2B78EF0F50E01DA /* Pods-RNCOpenDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCOpenDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNCOpenDoc/Pods-RNCOpenDoc.release.xcconfig"; sourceTree = "<group>"; };
-		5B08E178AC6D77F96341CAC9 /* Pods-RNCOpenDoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCOpenDoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNCOpenDoc/Pods-RNCOpenDoc.debug.xcconfig"; sourceTree = "<group>"; };
 		82ECAA4140073F78A2A4C9C9 /* libPods-RNCOpenDoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCOpenDoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNCOpenDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCOpenDoc.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNCOpenDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCOpenDoc.m; sourceTree = "<group>"; };
@@ -37,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313ED8A67F7140CADC9C61FB /* libPods-RNCOpenDoc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,22 +48,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		44CF864971127D1683618652 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5B08E178AC6D77F96341CAC9 /* Pods-RNCOpenDoc.debug.xcconfig */,
-				1F245479B2B78EF0F50E01DA /* Pods-RNCOpenDoc.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
 				B3E7B5881CC2AC0600A0062D /* RNCOpenDoc.h */,
 				B3E7B5891CC2AC0600A0062D /* RNCOpenDoc.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
-				44CF864971127D1683618652 /* Pods */,
 				97B86D37454F727FD94F4CE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -87,11 +73,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNCOpenDoc" */;
 			buildPhases = (
-				7F974B08ECF3C9D49D6C8F6B /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
-				0C29D0588045DD6CA6CC383C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,42 +116,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0C29D0588045DD6CA6CC383C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNCOpenDoc/Pods-RNCOpenDoc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F974B08ECF3C9D49D6C8F6B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNCOpenDoc-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -264,7 +212,6 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B08E178AC6D77F96341CAC9 /* Pods-RNCOpenDoc.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -281,7 +228,6 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F245479B2B78EF0F50E01DA /* Pods-RNCOpenDoc.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
