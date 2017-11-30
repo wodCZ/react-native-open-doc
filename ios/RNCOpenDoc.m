@@ -1,6 +1,8 @@
 
 #import "RNCOpenDoc.h"
+#if __has_include("NSTiffSplitter.h")
 #import "NSTiffSplitter.h"
+#endif
 
 @interface RNCOpenDoc ()
 
@@ -20,6 +22,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(open: (NSURL *)path)
 {
     NSString *relPath = path.relativePath;
+#if __has_include("NSTiffSplitter.h")
     if ([relPath hasSuffix:@".tif"] || [relPath hasSuffix:@".tiff"]){
         NSTiffSplitter* tiffSplitter = [[NSTiffSplitter alloc] initWithImageUrl:path usingMapping:YES];
         if (tiffSplitter.countOfImages > 1) {
@@ -27,6 +30,7 @@ RCT_EXPORT_METHOD(open: (NSURL *)path)
             return;
         }
     }
+#endif
     self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:path];
     self.documentInteractionController.delegate = self;
     BOOL fileOpenSuccess = [self.documentInteractionController presentPreviewAnimated:YES];
