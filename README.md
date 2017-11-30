@@ -1,6 +1,8 @@
 
 # react-native-open-doc
 
+Open files stored on device - Android and iOS. 
+
 ## Getting started
 
 `$ npm install react-native-open-doc --save`
@@ -39,7 +41,6 @@
 ```javascript
 import RNCOpenDoc from 'react-native-open-doc';
 
-// TODO: What to do with the module?
-RNCOpenDoc;
+RNCOpenDoc.open(pathToFile);
 ```
   
