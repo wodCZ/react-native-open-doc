@@ -36,7 +36,7 @@ public class RNCOpenDocModule extends ReactContextBaseJavaModule {
     }
 
     File file = new File(path);
-    if (file.exists()) {
+    if (!file.exists()) {
       Log.e(LOG_TAG, "File does not exist");
       return;
     }
