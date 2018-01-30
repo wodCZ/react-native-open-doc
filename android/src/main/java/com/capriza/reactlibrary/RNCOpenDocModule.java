@@ -31,14 +31,13 @@ public class RNCOpenDocModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void open(String path) {
-    if (!path.startsWith("file://")) {
-      path = "file://" + path;
-    }
-
     File file = new File(path);
     if (!file.exists()) {
       Log.e(LOG_TAG, "File does not exist");
       return;
+    }
+    if (!path.startsWith("file://")) {
+      path = "file://" + path;
     }
     MimeTypeMap mime = MimeTypeMap.getSingleton();
     Uri uri = Uri.parse(path);
